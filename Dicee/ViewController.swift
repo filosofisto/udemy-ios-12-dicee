@@ -19,9 +19,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDiceImages()
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        updateDiceImages()
+    }
+    
+    func updateDiceImages() {
         randomDiceIndex1 = Int.random(in: 1 ... 6)
         diceImageView1.image = UIImage(named: "dice\(randomDiceIndex1)")
         randomDiceIndex2 = Int.random(in: 1 ... 6)
